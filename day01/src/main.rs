@@ -1,4 +1,4 @@
-use utils::inputs::read_lines;
+use utils::read_lines;
 
 fn main() {
     println!("day01");
@@ -7,7 +7,7 @@ fn main() {
 }
 
 fn part1() {
-    let lines = read_lines("input.txt");
+    let lines = read_lines!("input.txt");
     let mut total = 0;
     for line in lines {
         let chars = line.chars().collect::<Vec<char>>();
@@ -35,7 +35,7 @@ fn part2() {
     ];
     let mut total = 0;
 
-    let lines = read_lines("input.txt");
+    let lines = read_lines!("input.txt");
     for line in lines {
         let mut first_digit = 0;
         let mut last_digit = 0;

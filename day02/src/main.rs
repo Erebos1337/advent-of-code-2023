@@ -1,4 +1,4 @@
-use utils::inputs::read_lines;
+use utils::read_lines;
 
 fn main() {
     println!("day02");
@@ -9,7 +9,7 @@ fn main() {
 fn part1() {
     let mut total_possible_games = 0;
 
-    let games = read_lines("input.txt");
+    let games = read_lines!("input.txt");
     'games: for (idx, line) in games.into_iter().enumerate() {
         let (_, game) = line.split_once(": ").unwrap();
         let sets = game.split("; ");
@@ -37,7 +37,7 @@ fn part1() {
 
 fn part2() {
     let mut sum_game_powers = 0;
-    let lines = read_lines("input.txt");
+    let lines = read_lines!("input.txt");
     for line in lines {
         let (_, game) = line.split_once(": ").unwrap();
 
